@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Validation</title>
+  </head>
+  <body>
+    <form action="#">
+      <fieldset>
+        <legend>User Details</legend>
+        <div class="user-detail-element">
+          <label for="mail">Email: </label>
+          <input type="email" id="mail" name="mail" />
+          <span class="error"></span>
+        </div>
+        <div class="user-detail-element">
+          <label for="password">Password: </label>
+          <input type="password" id="password" name="password" />
+          <span class="error"></span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Post Code</legend>
+        <div class="zip-code-element">
+          <label for="country">Country: </label>
+          <select name="country" id="country">
+            <option value="pl">Poland</option>
+            <option value="uk">United Kingdom</option>
+            <option value="fr">France</option>
+            <option value="swe">Sweden</option>
+            <option value="cz">Czech Republic</option>
+          </select>
+          <span class="error"></span>
+        </div>
+        <div class="zip-code-element">
+          <label for="postCode">Postal Code</label>
+          <input type="text" name="postCode" id="postCode" />
+          <span class="error"></span>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

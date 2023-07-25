@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  justify-content: space-around;
+}
+
+form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.user-detail-element,
+.zip-code-element {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  width: 15%;
+}
