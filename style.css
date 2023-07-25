@@ -1,6 +1,8 @@
 body {
   display: flex;
   justify-content: space-around;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 form {
@@ -8,15 +10,17 @@ form {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: space-between;
+  height: 40vh;
+  justify-content: flex-end;
 }
 
 .user-detail-element,
 .zip-code-element {
   display: flex;
   justify-content: center;
+  margin: 20px;
 }
 
 label {
-  width: 15%;
+  width: 25%;
 }
