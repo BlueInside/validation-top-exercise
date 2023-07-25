@@ -45,7 +45,18 @@ label {
 #submitForm:hover {
   background-color: #45a049;
 }
-
+.good {
+  position: absolute;
+  top: 19vw;
+  opacity: 0;
+  display: none;
+}
+.fade-in {
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0;
+}
 /* here */
 .error {
   opacity: 0;
@@ -79,5 +90,9 @@ input:valid {
 }
 
 input:invalid {
+  border-color: #e84d4d;
+}
+
+input.invalid {
   border-color: #e84d4d;
 }
