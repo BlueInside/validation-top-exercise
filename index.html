@@ -7,17 +7,32 @@
     <title>Validation</title>
   </head>
   <body>
-    <form action="#">
+    <form action="#" id="form" novalidate>
       <fieldset>
         <legend>User Details</legend>
         <div class="user-detail-element">
           <label for="mail">Email: </label>
-          <input type="email" id="mail" name="mail" />
+          <input
+            type="email"
+            id="mail"
+            name="mail"
+            required
+            minlength="6"
+            maxlength="100"
+            autocomplete="username"
+          />
           <span class="error"></span>
         </div>
         <div class="user-detail-element">
           <label for="password">Password: </label>
-          <input type="password" id="password" name="password" />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            pattern="(?=.*[A-Z])(?=.*[0-9]).{8,15}"
+            autocomplete="current-password"
+          />
           <span class="error"></span>
         </div>
       </fieldset>
@@ -25,7 +40,7 @@
         <legend>Post Code</legend>
         <div class="zip-code-element">
           <label for="country">Country: </label>
-          <select name="country" id="country">
+          <select name="country" id="country" required>
             <option value="pl">Poland</option>
             <option value="uk">United Kingdom</option>
             <option value="fr">France</option>
@@ -36,7 +51,7 @@
         </div>
         <div class="zip-code-element">
           <label for="postCode">Postal Code: </label>
-          <input type="text" name="postCode" id="postCode" />
+          <input type="text" name="postCode" id="postCode" required />
           <span class="error"></span>
         </div>
       </fieldset>
@@ -44,5 +59,6 @@
         <button type="submit" id="submitForm">SUBMIT</button>
       </div>
     </form>
+    <script src="index.js"></script>
   </body>
 </html>
