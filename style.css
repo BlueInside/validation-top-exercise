@@ -24,3 +24,13 @@ form {
 label {
   width: 25%;
 }
+
+.submit-form {
+  margin-top: 10px;
+  text-align: center;
+}
+#submitForm {
+  width: 40%;
+  height: 50px;
+  border-radius: 10px;
+}
