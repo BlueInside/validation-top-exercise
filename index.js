@@ -25,6 +25,7 @@ const submitFormBtn = document.getElementById('submitForm');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (form.checkValidity()) {
+    showGoodJob();
   } else {
     if (!password.validity.valid) {
       showPasswordValidationError();
@@ -38,11 +39,15 @@ form.addEventListener('submit', (e) => {
 });
 
 const postCode = document.getElementById('postCode');
+const select = document.getElementById('country');
+select.addEventListener('change', () => {
+  checkPostCode();
+});
 postCode.addEventListener('input', checkPostCode);
 function checkPostCode() {
   const constraints = {
     pl: [
-      '^[0-9]{2}-?[0-9]{3}',
+      '^\\d{2}-?\\d{3}$',
       'Poland post code must have exactly 5 digits : e.g. 27600 or 27-600',
     ],
     uk: [
@@ -122,4 +127,15 @@ function showPasswordValidationError() {
 function hideErrorMessage(errorContainer) {
   errorContainer.textContent = '';
   errorContainer.className = 'error';
+}
+
+function showGoodJob() {
+  const goodJob = document.querySelector('.good-job');
+  goodJob.style.display = 'block';
+  setTimeout(hideGoodJob, 2000);
+}
+
+function hideGoodJob() {
+  const goodJob = document.querySelector('.good-job');
+  goodJob.style.display = 'none';
 }
